@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.bg-coloring{
+    background-color: rgb(24, 23, 23);
+    
+}
+body{
+    font-family: 'Khula', sans-serif;
+    width: 100%;
+    background-color: rgb(31, 29, 29);
+    overflow: hidden;
+}
+button{
+    background:transparent;
+    border: transparent;
+    outline:none;
+    cursor: pointer;
+    margin: 25px 20px;
+    font-weight: 600;
+    font-size:24px;
+    color:white;
+    transition: 0.2s;
+}
+button:hover{
+    transition: 0.2s;
+    opacity: 0.7;
+}
+button:active{
+    transition: 0.2s;
+    opacity: 0.4;
+}
+nav{
+    background-color: rgb(27, 27, 27);
+    width: 250px;
+    height: 100vh;
+    position: relative;
+    left:-999px;
+    transition: 0.5s ease;
+}
+nav ul li{
+    padding: 20px 0;
+    text-align: center;
+    transition: 0.2;
+}
+nav ul li:hover{
+    cursor: pointer;
+    background-color: #454954;
+    transition: 0.2s;
+}
+nav ul li:active{
+    background-color: #23252b;
+    transition:0.2s;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size:21px;
+}
+li{
+    list-style-type:none;
+}
+.search-f{ 
+    width: 50% !important;
+}
+input.form-control{
+    background-color: #23252b !important;
+    border:#1a1c20;
+    color:white;
+}
+nav{
+    position:absolute;
+    z-index: 200;
+}
+
+.ongoing{
+    margin-top:15px;
+}
+.ongoing a{
+    text-decoration: none;
+}
+/*Ongoing page*/
+.title-img img{
+    width: 100px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.title-text {
+    margin-left:30px;
+    font-size:20px;
+    display: inline-block;
+    justify-content: baseline;
+}
+.title-sinopsis{
+    font-size:10px;
+    margin-left:30px;
+    color:gray;
+}
+/*anime titles*/
+.anime{
+margin-top: 20px;
+
+}
+.synopsis p{
+    margin-top:20px;
+    font-size:14px;
+    color:gray;
+}
+/* authorization page */
+
+.form-sign h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size:40px;
+}
+.form-floating input{
+    margin-top: 20px;
+    border-radius: 5px;
+    border:none;
+    width: 70%;
+    height:50px;
+}
+.submit-btn{
+    width: 70%;
+}
+input.form-control#commit{
+    background-color: white !important;
+    color:black !important;
+}

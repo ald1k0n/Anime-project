@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icons8-adn-anime-480.png">
+    <link href="css/bootstrap-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/video-js.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="navbar navbar-expand navbar-dark bg-coloring">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-md-center">
+                <button class="openButton"><img src="img/30-303853_hamburger-menu-icon-menu-button-three-lines.png" width="24px"></button>
+                <form class="search-f">
+                    <input type="text" class="form-control" placeholder="Поиск" aria-label="Search">
+                </form>
+                <button class="btn btn-outline-light me-2" id="search-btn">Поиск</button>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="openButton">
+                <a href="/popular">Популярное</a>
+            </li>
+            <li class="openButton">
+                <a href="/finished">Завершенные</a>
+            </li>
+            <li class="openButton">
+                <a href="/anonces">Анонсы</a>
+            </li>
+            <li class="openButton">
+                <a href="/profile">Профиль</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="form-sign">
+        <div class="container">
+            <form action="/register" method="post">
+                <h1 class=" mb-3 fw-normal text-white mt-5 text-center">Регистрация</h1>
+                <div class="form-floating text-center">
+                    <div class="d-block">
+                        <input type="text" placeholder="Никнейм" name="nick" required autofocus>
+                    </div>
+                    <div class="d-block">
+                        <input type="email" placeholder="Почта" name="email" required >
+                    </div>
+                    <input type="password" placeholder="Пароль" name="pass" required >
+                    <button class="btn btn-primary btn-lg submit-btn" type="submit">Зарегистрироватся</button>
+                    <p class="mt-3 mb-3 text-muted">&copy; AniTU</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+
+
+    <script src="script/jq.min.js"></script>
+    <script src="script/boot.js" ></script>
+    <script src="script/slick.min.js" ></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

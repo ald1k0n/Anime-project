@@ -1,0 +1,21 @@
+<%-include ('partials/header')%>
+
+<div class="container">
+    <div class="admin mt-5">
+        <form action="/commit" method="post">
+            <label for="title" class="text-white">Название аниме</label>
+            <input type="text" id="commit" class="form-control" name="title">
+            <label for="image" class="text-white">Ссылка на постер</label>
+            <input type="text" id="commit" class="form-control" name="image">
+            <label for="synopsis" class="text-white">Описание</label>
+            <textarea name="synopsis" class="form-control" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary mx-auto">Отправить</button>
+        </form>   
+    </div>
+</div>
+
+
+
+
+
+<%-include ('partials/footer')%>
