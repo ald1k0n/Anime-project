@@ -1,0 +1,21 @@
+<%-include ('partials/header')%>
+<%commits.forEach(function(commit){%>
+    <div class="container">
+        <div class="ongoing">
+            <a href="/anime/<%=commit.animeTitle%>">
+                <div class="anime-title d-flex">
+                    <div class="title-img">
+                        <img src="<%=commit.animePoster%>">
+                    </div>
+                    <div class="title-name">
+                        <h1 class="text-white title-text"><%=commit.animeTitle%></h1>
+                        <p class="title-sinopsis"><%=commit.animeSynopsis.substring(0,320) + '...'%></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+<%})%>
+
+
+<%-include ('partials/footer')%>

@@ -1,18 +1,66 @@
 <%-include ('partials/animes_header')%>
 <div class="container">
     <div class="anime">
-        <h1 class="anime-name text-white d-block text-center"><%=animeTitle%></h1>
+        <h1 class="anime-name text-white d-block text-center"><%=descr.data[0].title_english%></h1>
     </div>
     <div class="anime-name">
         <div class="anime-img text-center">
-            <img src="<%=animePoster%>" style="width:200px;">
+            <img src="<%=descr.data[0].images.jpg.large_image_url%>" style="width:200px;">
+        </div>
+        <form action="/fav" method="post">
+            <button name="fav" value="<%=descr.data[0].title%>" style="display:block;margin-left:auto;margin-right:auto" type="submit"><i style="color:red" class="fa-regular fa-heart"></i></button>
+        </form>
+        
+        <div class="genres" class="text-center">
+            <h5 class="mt-4" style="color:rgb(155, 148, 148); font-size:18px">Genres:</h5>
+            <%for(let i =0;i<descr.data[0].genres.length;i++){%>
+                <a href="/finished/title/<%=descr.data[0].genres[i].mal_id%>"><p class="d-inline-block" style="color:rgb(170, 167, 167); font-size:15px"><%=descr.data[0].genres[i].name%></p></a>
+           <% }%>
+           <hr style="color:white">
         </div>
         <div class="synopsis">
-            <p class="text-white"><%=animeSynopsis%></p>
+            <p class="text-white"><%=descr.data[0].synopsis%></p>
+        </div>
+        <div class="anime-player">
+            <iframe width="100%" height="729px" src="<%=trailer%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <hr style="color:white">
+        <div class="coms">
+            <%if(isAuth){%>
+                <form action="/finished/<%=descr.data[0].title%>" method="post">
+                    <h5 class="text-white text-center" >Comments</h5>
+                    <textarea name="comment" name="coms" class="form-control" rows="3" placeholder="Comment"></textarea>
+                    <button style="display:block;margin-left:auto;margin-right:auto" class="btn btn-lg btn-outline-primary" type="submit">Send</button>
+                </form>
+                <hr style="color:white">
+            <%}%>
+            
+            
+            <%for(let i=comms.length-1;i>=0;i--){%>
+                <h6 class="text-white d-flex" >User: <p style="color:rgb(161, 160, 160)"><%=comms[i].name%></p></h6>
+                <h6 class="text-white">Comment:</h6>
+                <div class="com pt-2 pb-2 ms-2 me-1">
+                     <p class="text-white" style="font-size:15px"><%=comms[i].comment%></p>
+                </div>
+               
+                
+                <%if(nick === comms[i].name){%>
+                    <form action="/remove/<%=comms[i].title%>" method="post">
+                        <button name="delBtn" style="float:right" value="<%=comms[i]._id%>" type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                    </form>
+                <%}%>
+                <p style="color:rgb(134, 134, 134);font-size: 10px;"><%=comms[i].date%></p>
+                <hr style="color:white">
+               
+                
+           <% }%>
+                
+            
+
         </div>
     </div>
+    
 </div>
-
 
 
 <%-include ('partials/animes_footer')%>

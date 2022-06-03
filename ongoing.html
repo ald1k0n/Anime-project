@@ -16,10 +16,13 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse justify-content-md-center">
                 <button class="openButton"><img src="img/30-303853_hamburger-menu-icon-menu-button-three-lines.png" width="24px"></button>
-                <form class="search-f">
-                    <input type="text" class="form-control" placeholder="Поиск" aria-label="Search">
+                <div class="container search-f">
+                    <form class="input-group" method="post" action="/search">
+                    <input type="search" class="form-control rounded m-3" placeholder="Search" name="search" aria-label="Search" style="height:50px" aria-describedby="search-addon" />
+                    <button type="submit" class="btn btn-outline-primary">Search</button>
                 </form>
-                <button class="btn btn-outline-light me-2" id="search-btn">Поиск</button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -27,7 +30,7 @@
         <ul>
             <li class="openButton"><a href="/">Главное</a></li>
             <li class="openButton"><a href="/">Завершенные</a></li>
-            <li class="openButton"><a href="/">Анонсы</a></li>
+            <li class="openButton"><a href="/anonces">Анонсы</a></li>
             <li class="openButton"><a href="/">Профиль</a></li>
         </ul>
     </nav>

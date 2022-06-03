@@ -1,0 +1,21 @@
+<%-include('partials/animes_header')-%>
+
+<div class="container">
+    
+            <%for(let i=0;i<animeOBJ.angoing.data.length;i++){%>
+                <a href="/finished/title/anime/<%=animeOBJ.angoing.data[i].title_japanese%>" name="title" style="text-decoration:none" type="submit">
+                    <div class="ongoing d-inline-block ms-3">
+                        <div class="anime-title">
+                            <div class="title-imgg">
+                                <img src="<%=animeOBJ.angoing.data[i].images.webp.large_image_url%>">
+                                <h5 class="text-white"><%=animeOBJ.angoing.data[i].title.substring(0,16)%></h5>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            <%};%>
+</div>
+
+
+
+<%-include('partials/animes_footer')-%>

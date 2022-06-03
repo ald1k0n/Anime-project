@@ -1,0 +1,20 @@
+<%-include('partials/animes_header.ejs')-%>
+<div class="container">
+    <%for(let i= 0;i<animeTitle.data.length;i++){%>
+        <a href="/finished/title/anime/<%=animeTitle.data[i].title%>" name="title" style="text-decoration:none" type="submit">
+            <div class="ongoing d-inline-block ms-3">
+                <div class="anime-title">
+                    <div class="title-imgg">
+                        <img src="<%=animeTitle.data[i].images.jpg.image_url%>">
+                        <h5 class="text-white"><%=animeTitle.data[i].title.substring(0,16)%></h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+    <%}%>
+</div>
+
+
+
+
+<%-include('partials/animes_footer.ejs')-%>

@@ -1,0 +1,25 @@
+<%-include ('partials/animes_header')%>
+<div class="container">
+    <h5 class="text-center text-white mt-3">Airing:</h5>
+    <%for(let i = 0;i<angoing.data.length;i++){%>
+        <a style="text-decoration:none" href="/finished/<%=angoing.data[i].title_japanese%>">
+            <div class="ongoing">
+            <div class="anime-title d-flex">
+                <div class="title-img">
+                    <img src="<%=angoing.data[i].images.webp.large_image_url%>">
+                </div>
+                <div class="title-name">
+                    <h1 class="text-white title-text"><%=angoing.data[i].title%></h1><br>
+                  
+                    
+                        <p class="text-white title-sinopsis"><%=angoing.data[i].synopsis%></p>
+                    
+                </div>
+            </div>   
+        </div>
+        </a>
+        
+    <%}%>
+
+</div>
+<%-include ('partials/animes_footer')%>

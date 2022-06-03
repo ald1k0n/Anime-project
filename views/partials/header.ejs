@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="img/icons8-adn-anime-480.png">
-    <link href="css/bootstrap-min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/video-js.css">
+    <link rel="icon" href="/img/icons8-adn-anime-480.png">
+    <link href="/css/bootstrap-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/video-js.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a2598e6a93.js" crossorigin="anonymous"></script>
     <title>Anime Project</title>
 </head>
 <body>
     <div class="navbar navbar-expand navbar-dark bg-coloring">
         <div class="container-fluid">
             <div class="collapse navbar-collapse justify-content-md-center">
-                <button class="openButton"><img src="img/30-303853_hamburger-menu-icon-menu-button-three-lines.png" width="24px"></button>
-                <form class="search-f">
-                    <input type="text" class="form-control" placeholder="Поиск" aria-label="Search">
+                <button class="openButton"><img src="/img/30-303853_hamburger-menu-icon-menu-button-three-lines.png" width="24px"></button>
+
+                <div class="search-f">
+                    <form class="input-group" method="post" action="/search">
+                    <input type="search" class="form-control rounded m-3 me-2" placeholder="Search" name="search" aria-label="Search"  aria-describedby="search-addon" />
+                    <button type="submit" class="btn btn-outline-primary ms-1">Search</button>
                 </form>
-                <button class="btn btn-outline-light me-2" id="search-btn">Поиск</button>
+                </div>
+                
             </div>
         </div>
     </div>
     <nav>
         <ul>
             <li class="openButton">
-                <a href="/popular">Популярное</a>
+                <a href="/popular">Popular</a>
             </li>
             <li class="openButton">
-                <a href="/finished">Завершенные</a>
+                <a href="/finished">Finished</a>
             </li>
             <li class="openButton">
-                <a href="/anonces">Анонсы</a>
+                <a href="/anonces">Ongoing</a>
             </li>
             <li class="openButton">
-                <a href="/profile">Профиль</a>
+                <a href="/profile">Profile</a>
             </li>
         </ul>
     </nav>

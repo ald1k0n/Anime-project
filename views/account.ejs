@@ -1,0 +1,43 @@
+<%-include('partials/header.ejs')-%>
+<div class="container">
+
+    <div class="profile">
+        <div class="label pt-3">
+            <h3 class="text-center">Hello <%=name%></h3>
+        </div>
+        <hr style="color:white">
+        <div class="profileImg">
+            <img src="/img/profiel.png" class="text-center" style="border:2px solid white" width="200px">
+        </div>
+        <hr style="color:white">
+        <!-- accoridionki -->
+        <button class="accordion">Favorite anime</button>
+        <div class="panel">
+            <%if(item.length===0){%>
+                <p class="text-center">You haven't added anime yet</p>
+            <%}%>
+            <%if(item.length>0){%>
+               <% for(let i=0;i<item.length;i++){%>
+                <a class="text-center" style="text-decoration:none" href="<%=item[i].url%>"><p class="text-white"><%=item[i].url.substring(10,)%></p></a>
+               <% }%>
+            <%}%>
+        </div>
+
+        <hr style="color:white">
+        <%if(name==="aldik"){%>
+            <div class="admi text-center" >
+                 <a style="text-decoration:none;font-size:18px" class="text-white" href="/admin">Admin</a><br>
+                 <a  style="text-decoration:none;font-size:18px" class="text-white" href="/commit">Add News</a>
+            </div>
+           
+        <%}%>
+        <form action="/logout" method="post">
+            <button style="display:block; margin-right:auto; margin-left:auto" class="btn btn-secondary btn-lg" type="submit" name="logout">Log Out</button>
+        </form>
+        
+    </div>
+</div>
+
+
+
+<%-include('partials/footer.ejs')-%>
